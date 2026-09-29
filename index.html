@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Alat Musik Dayak Sampit - Kelompok 1</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hubungkan CSS Terpisah -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container Utama Dashboard -->
+    <div class="dashboard-container">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-guitar"></i>
+                <h2>Dayak Music</h2>
+                <p>Sampit Store</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#"><i class="fa-solid fa-store"></i> Katalog Produk</a></li>
+                <li><a href="#katalog"><i class="fa-solid fa-box"></i> Alat Musik</a></li>
+                <li><a href="#kontak"><i class="fa-solid fa-address-book"></i> Kontak Toko</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>Owner: <strong>Kelompok 1 Startup Digital</strong></p>
+                <p><i class="fa-brands fa-whatsapp"></i> 082255886736</p>
+            </div>
+        </aside>
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+            <!-- Header Dashboard -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Dashboard Penjualan Alat Musik Tradisional</h1>
+                    <p>Khas Dayak Sampit, Kalimantan Tengah</p>
+                </div>
+                <div class="header-profile">
+                    <div class="avatar"><i class="fa-solid fa-user-shield"></i></div>
+                    <span>Kelompok 1</span>
+                </div>
+            </header>
+
+            <!-- Banner / Hero Section -->
+            <section class="banner-card">
+                <div class="banner-text">
+                    <h2>Lestarikan Budaya Melalui Musik Tradisional</h2>
+                    <p>Temukan berbagai alat musik khas Dayak Sampit berkualitas tinggi langsung dari pengrajin lokal.</p>
+                </div>
+                <div class="banner-image">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+            </section>
+
+            <!-- Katalog Produk -->
+            <section class="product-section" id="katalog">
+                <div class="section-header">
+                    <h3>Katalog Alat Musik</h3>
+                    <span>Pilih produk favorit Anda</span>
+                </div>
+
+                <div class="product-grid" id="productGrid">
+                    <!-- Produk akan dirender lewat JavaScript -->
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="main-footer" id="kontak">
+                <p>&copy; 2026 Toko Alat Musik Dayak Sampit. Dikelola oleh <strong>Kelompok 1 Startup Digital</strong>.</p>
+                <p>WhatsApp Layanan: <a href="https://wa.me/6282255886736" target="_blank">082255886736</a></p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- MODAL POPUP CHECKOUT / ORDER -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modalProductName">Formulir Pemesanan</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm">
+                    <input type="hidden" id="inputProduct" name="product">
+                    <input type="hidden" id="inputPrice" name="price">
+                    
+                    <div class="form-group">
+                        <label for="namaLengkap"><i class="fa-solid fa-user"></i> Nama Lengkap</label>
+                        <input type="text" id="namaLengkap" required placeholder="Masukkan nama lengkap Anda...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nomorHp"><i class="fa-solid fa-phone"></i> Nomor HP / WhatsApp</label>
+                        <input type="tel" id="nomorHp" required placeholder="Contoh: 08123456789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat"><i class="fa-solid fa-location-dot"></i> Alamat Pengiriman</label>
+                        <textarea id="alamat" rows="3" required placeholder="Masukkan alamat lengkap tujuan..."></textarea>
+                    </div>
+
+                    <div class="product-summary">
+                        <p>Harga Satuan: <strong id="summaryPriceText">Rp 0</strong></p>
+                    </div>
+
+                    <button type="submit" class="btn-order-submit">
+                        <i class="fa-brands fa-whatsapp"></i> Order Sekarang via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hubungkan JS Terpisah -->
+    <script src="script.js"></script>
+</body>
+</html>
